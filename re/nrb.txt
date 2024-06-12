@@ -1,0 +1,8 @@
+Hooked C functions:
+	__NETRBClientStartService (arg0 is an xpc dictionary which is modified)
+
+IP Strings found in the hook:
+	172.20.10.1
+	255.255.255.0
+	172.20.10.2
+	172.20.10.253

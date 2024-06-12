@@ -1,0 +1,13 @@
+Hooked ObjC Methods:
+	+[NSDictionary newWithContentsOf:(id)arg1 immutable:(bool)arg2]
+
+Hooked C Functions (linked w/ dyld):
+	_SCDynamicStoreCopyValue
+	_SecKeyRawVerify
+	__CFPreferencesCopyValueWithContainer
+
+CFNotificationCenter observers:
+	xyz.tetherfree.preferences
+	xyz.tetherfree.ping
+
+2nd EntryPoint present for loading the prefbundle and creating an SCDynamicStore

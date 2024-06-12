@@ -1,0 +1,33 @@
+Hooked C Functions (linked w/ dyld):
+	__CTServerConnectionGetPacketContextActiveByServiceType
+	__CTServerConnectionTetheringAssertionCreate -> return 0 and do nothing
+	__CTServerConnectionSetPacketContextActiveByServiceType
+	__CTServerConnectionCopyPacketContextInterfaceName
+	__CTServerConnectionCopyPacketContextInterfaceNameByServiceType
+	__CTServerConnectionSetPacketProtocolActiveByServiceType
+	__CTServerConnectionGetCarrierEntitlements
+	__CTServerConnectionCreateWithIdentifier
+	__CTServerConnectionGetDataServiceAvailability
+	_PFUserAddRule
+	__CTServerConnectionIsDataAttached
+
+Hooked C functions (with dynamic loading):
+	If CoreTelephony.framework is loaded:
+		__ZL46_CTServerConnectionCarrierSettingsCopyValueForP20__CTServerConnectionPK10__CFStringPPKvb
+
+		If prior symbol isn't found, hook:
+			__CTServerConnectionCarrierSettingsCopyValue (linked w/ dyld)
+
+More hooked C functions (linked w/ dyld):
+	__CTServerConnectionCopyDataStatus
+	__CTServerConnectionGetCellularDataIsEnabled
+	_SCPreferencesGetValue
+	__CTServerConnectionDormancySuspendAssertionCreate
+
+Global Symbols used (linked w/ dyld):
+	_kCTCarrierEntitlementKeyFaceTime
+	_kCTCarrierEntitlementKeyTethering
+	_kCTCarrierEntitlementResultAllowed
+
+Global strings:
+	kCTCarrierEntitlementKeyVoWiFi
